@@ -1,0 +1,232 @@
+.btn {
+	background-image: linear-gradient(to right bottom, $color-primary-3, $color-primary-2);
+	border-radius: 50%;
+	border: none;
+	text-transform: uppercase;
+	color: $color-text-light;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	transition: all .2s;
+	padding: 1.3rem 1.3rem;
+	font-size: 1.4rem;
+
+	&:hover {
+		transform: scale(1.05);
+		filter: hue-rotate(25deg);
+	}
+	
+	&:focus {
+		outline: none;
+	}
+
+	svg {
+		height: 2.25rem;
+		width: 2.25rem;
+		fill: currentColor;
+	}
+}
+
+.btn-small {
+	background-image: linear-gradient(to right bottom, $color-primary-3, $color-primary-2);
+	border-radius: .5rem;
+	border: none;
+	text-transform: uppercase;
+	color: $color-text-light;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	transition: all .2s;
+	font-size: 1.3rem;
+	padding: 1rem 1.75rem;
+	text-decoration: none;
+
+	&:link {
+		background-image: linear-gradient(to right bottom, $color-primary-3, $color-primary-2);
+		border-radius: .5rem;
+		border: none;
+		text-transform: uppercase;
+		color: $color-text-light;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		transition: all .2s;
+		font-size: 1.3rem;
+		padding: 1rem 1.75rem;
+		text-decoration: none;
+
+		svg {
+			height: 1.5rem;
+			width: 1.5rem;
+			fill: currentColor;
+		}
+	}
+
+	&:visited {
+		background-image: linear-gradient(to right bottom, $color-primary-3, $color-primary-2);
+		border-radius: .5rem;
+		border: none;
+		text-transform: uppercase;
+		color: $color-text-light;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		transition: all .2s;
+		font-size: 1.3rem;
+		padding: 1rem 1.75rem;
+		text-decoration: none;
+
+		svg {
+			height: 1.5rem;
+			width: 1.5rem;
+			fill: currentColor;
+		}
+	}
+
+	&:hover {
+		transform: scale(1.05);
+		filter: hue-rotate(25deg);
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	>* {
+		&:first-child {
+			margin-right: 1rem;
+		}
+	}
+
+	svg {
+		height: 1.5rem;
+		width: 1.5rem;
+		fill: currentColor;
+	}
+}
+
+.btn-inline {
+	color: $color-primary-1;
+	font-size: 1.2rem;
+	border: none;
+	background-color: $color-background-2;
+	padding: .8rem 1.2rem;
+	border-radius: .5rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	transition: all .2s;
+	svg {
+		height: 1.5rem;
+		width: 1.5rem;
+		fill: currentColor;
+		margin: 0 .2rem;
+	}
+
+	span {
+		margin: 0 .4rem;
+	}
+
+	&:hover {
+		color: $color-primary-2;
+		background-color: $color-background-3;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.btn-tiny {
+	height: 1.75rem;
+	width: 1.75rem;
+	border: none;
+	background: none;
+	cursor: pointer;
+	
+	svg {
+		height: 100%;
+		width: 100%;
+		fill: $color-primary-1;
+		transition: all .3s;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover {
+		svg {
+			fill: $color-primary-2;
+			transform: translateY(-1px);
+			filter: hue-rotate(-25deg);
+		}
+	}
+
+	&:active {
+		svg {
+			fill: $color-primary-2;
+			transform: translateY(0);
+		}
+	}
+
+	&:not(:last-child) {
+		margin-right: .3rem;
+	}
+}
+
+.recipe__info-buttons {
+	display: flex;
+	margin-left: 1.5rem;
+	visibility: hidden;
+	opacity: 0;
+	transform: translateY(5px);
+	transition: all .4s;
+}
+
+.recipe__love {
+	background-image: linear-gradient(to right bottom, $color-primary-3, $color-primary-2);
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+	height: 4.5rem;
+	width: 4.5rem;
+	margin-left: auto;
+	transition: all .2s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:hover {
+		transform: scale(1.07);
+		filter: hue-rotate(25deg);
+	}
+
+	&:focus {
+		outline: none;
+	}
+	
+	svg {
+		height: 2.75rem;
+		width: 2.75rem;
+		fill: #fff;
+	}
+}
+
+.results__btn--prev {
+	float: left;
+	flex-direction: row-reverse;
+}
+
+.likes__btn--prev {
+	float: left;
+	flex-direction: row-reverse;
+}
+
+.results__btn--next {
+	float: right;
+}
+
+.likes__btn--next {
+	float: right;
+}

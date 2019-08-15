@@ -1,0 +1,108 @@
+$color-primary-1: #5E43C9;
+$color-primary-2: #5655C6;
+$color-primary-3: #2E8AC6;
+
+$color-text-primary: #565965;
+$color-text-light: #fff;
+$color-text-dark: #878c96;
+$color-text-placeholder: #ccd2da;
+
+$font-family: 'Nunito', sans-serif;
+
+$color-shadow: 0 0.7rem 3rem rgba(86, 91, 101, 0.08);
+
+$color-background-1: #fff;
+$color-background-2: #eff1f7;
+$color-background-3: #e7eaf3;
+
+$background-gradient: linear-gradient(135deg, rgba(29, 29, 29, 0.05) 0%, rgba(29, 29, 29, 0.05) 17%,rgba(27, 27, 27, 0.05) 17%, rgba(27, 27, 27, 0.05) 34%,rgba(31, 31, 31, 0.05) 34%, rgba(31, 31, 31, 0.05) 93%,rgba(242, 242, 242, 0.05) 93%, rgba(242, 242, 242, 0.05) 100%),linear-gradient(135deg, rgba(129, 129, 129, 0.05) 0%, rgba(129, 129, 129, 0.05) 66%,rgba(117, 117, 117, 0.05) 66%, rgba(117, 117, 117, 0.05) 91%,rgba(199, 199, 199, 0.05) 91%, rgba(199, 199, 199, 0.05) 100%),linear-gradient(135deg, rgba(31, 31, 31, 0.07) 0%, rgba(31, 31, 31, 0.07) 15%,rgba(139, 139, 139, 0.07) 15%, rgba(139, 139, 139, 0.07) 23%,rgba(200, 200, 200, 0.07) 23%, rgba(200, 200, 200, 0.07) 29%,rgba(102, 102, 102, 0.07) 29%, rgba(102, 102, 102, 0.07) 100%),linear-gradient(90deg, rgb(19, 196, 228),rgb(126, 8, 222));
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	&::before {
+		box-sizing: inherit;
+	}
+	&::after {
+		box-sizing: inherit;
+	}
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+body {
+	font-family: $font-family;
+	font-weight: 400;
+	line-height: 1.6;
+	color: $color-text-primary;
+	background-image: $background-gradient;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: calc(100vh - 2 * 4vw);
+}
+
+.container {
+	max-width: 120rem;
+	margin: 4vw auto;
+	background-color: $color-background-1;
+	border-radius: 2px;
+	overflow: hidden;
+	box-shadow: 0 2rem 6rem 0.5rem rgba(101, 90, 86, 0.2);
+	display: grid;
+	grid-template-rows: 10rem minmax(100rem, auto);
+	grid-template-columns: 1.1fr 2fr 1.1fr;
+	grid-template-areas: "head head head" "list recipe shopping";
+}
+
+.heading-2 {
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: $color-primary-1;
+	text-transform: uppercase;
+	margin-bottom: 2.5rem;
+	text-align: center;
+}
+
+.copyright {
+	color: $color-text-dark;
+	font-size: 1.2rem;
+	margin-top: auto;
+}
+
+.link {
+	&:link {
+		color: $color-text-dark;
+	}
+	&:visited {
+		color: $color-text-dark;
+	}
+}
+
+.loader {
+	margin: 5rem auto;
+	text-align: center;
+	
+	svg {
+		height: 5.5rem;
+		width: 5.5rem;
+		fill: $color-primary-1;
+		transform-origin: 44% 50%;
+		animation: rotate 1.5s infinite linear;
+	}
+}
+
+@media only screen and (max-width: 68.75em) {
+	html {
+		font-size: 50%;
+	}
+
+	.container {
+		width: 100%;
+		margin: 0;
+		border-radius: 0;
+	}
+}

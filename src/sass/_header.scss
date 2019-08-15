@@ -1,0 +1,112 @@
+.header {
+	grid-area: head;
+	background-color: $color-background-2;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header__logo {
+	border-radius: 50%;
+	margin-left: 4rem;
+	height: 5rem;
+	display: block;
+	background-image: $background-gradient;
+
+	&-text {
+		margin: 0 -3rem 0 -24rem;
+		font-family: 'Pacifico', cursive;
+		font-weight: 700;
+		font-size: 2.5rem;
+		color: $color-primary-3;
+	}
+}
+
+.search {
+	background-color: $color-background-1;
+	border-radius: .5rem 2.4rem 2.4rem .5rem;
+	display: flex;
+	align-items: center;
+	padding-left: 3rem;
+	margin-left: -5rem;
+	transition: all .3s;
+	&:focus-within {
+		transform: translateY(-2px);
+		box-shadow: $color-shadow;
+	}
+}
+
+.search__field {
+	border: none;
+	background: none;
+	font-family: inherit;
+	color: inherit;
+	font-size: 1.7rem;
+	width: 40rem;
+	&:focus {
+		outline: none;
+	}
+	&::placeholder {
+		color: $color-text-placeholder;
+	}
+}
+
+.likes {
+	position: relative;
+	align-self: stretch;
+	padding: 0 !important;
+	padding: 3rem 0;
+}
+
+.likes__field {
+	cursor: pointer;
+	padding: 0 4rem;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	transition: all .3s;
+	&:hover {
+		background-color: $color-background-3;
+		&+.likes__panel {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
+
+.likes__panel {
+	&:hover {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	position: absolute;
+	right: 0;
+	top: 10rem;
+	z-index: 10;
+	padding: 2rem 0;
+	width: 34rem;
+	background-color: $color-background-1;
+	box-shadow: 0 0.8rem 5rem 2rem rgba(101, 90, 86, 0.1);
+	visibility: hidden;
+	opacity: 0;
+	transition: all .5s .2s;
+}
+
+.likes__icon {
+	fill: $color-primary-1;
+	height: 3.75rem;
+	width: 3.75rem;
+}
+
+.results {
+	padding: 3rem 0;
+}
+
+.results__list {
+	list-style: none;
+}
+
+.likes__list {
+	list-style: none;
+}
